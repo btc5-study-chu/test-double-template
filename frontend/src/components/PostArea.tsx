@@ -1,4 +1,12 @@
-export const PostArea = () => {
+import {UserRepository} from "../type/TypeUserRepository.ts";
+
+type Props  = {
+        userRepository:UserRepository
+}
+
+
+export const PostArea = ({userRepository}:Props) => {
+       console.log(userRepository)
     return (
         <>
             <div>名前</div>
