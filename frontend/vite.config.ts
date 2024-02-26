@@ -13,4 +13,9 @@ const testConfig: InlineConfig = {
 export default defineConfig({
   test: testConfig,
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api': 'http://localhost:8080',
+    },
+  },
 })

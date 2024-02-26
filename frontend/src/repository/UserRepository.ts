@@ -1,9 +1,17 @@
-import {InputObject, UserRepository} from "../type/TypeUserRepository.ts";
+import {InputObject} from "../type/TypeUserRepository.ts";
+import {DefaultHttp, Http} from "../http/Http.ts";
 
-
+export  interface UserRepository {
+    submit(inputObject: InputObject): void
+}
 export class DefaultUserRepository implements UserRepository {
-    submit(inputObject: InputObject) {
-        console.log(inputObject)
+    http: Http
+    constructor(http = new DefaultHttp()) {
+        this.http = http
     }
+    submit(inputObject: InputObject) {
+        this.http.submitHttp(inputObject)
+    }
+
 }
 

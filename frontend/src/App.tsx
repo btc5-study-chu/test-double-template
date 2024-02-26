@@ -1,19 +1,14 @@
-import {PostArea} from "./components/PostArea.tsx";
-import {InfoArea} from "./components/InfoArea.tsx";
-import {DefaultUserRepository} from "./repository/UserRepository.ts";
-import {UserRepository} from "./type/TypeUserRepository.ts";
+import {PostArea} from "./screens/PostArea.tsx";
+import {InfoArea} from "./screens/InfoArea.tsx";
 
 
-interface Props {
-   userRepository : UserRepository
-}
-function App({
-                 userRepository = new DefaultUserRepository()
-             }:Props) {
+
+
+function App() {
 
   return (
     <>
-      <PostArea userRepository={userRepository}/>
+      <PostArea />
       <InfoArea />
     </>
   )

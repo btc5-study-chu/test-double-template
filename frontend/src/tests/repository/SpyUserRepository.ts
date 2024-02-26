@@ -1,4 +1,5 @@
-import {InputObject, UserRepository} from "../../type/TypeUserRepository.ts";
+import {InputObject} from "../../type/TypeUserRepository.ts";
+import {UserRepository} from "../../repository/UserRepository.ts";
 
 export class SpyUserRepository implements UserRepository {
     submit_argumetValue: InputObject | null = null
