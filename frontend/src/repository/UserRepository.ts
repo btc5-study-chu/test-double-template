@@ -3,6 +3,7 @@ import {DefaultHttp, Http} from "../http/Http.ts";
 
 export  interface UserRepository {
     submit(inputObject: InputObject): void
+    getUsers():void
 }
 export class DefaultUserRepository implements UserRepository {
     http: Http
@@ -12,6 +13,8 @@ export class DefaultUserRepository implements UserRepository {
     submit(inputObject: InputObject) {
         this.http.submitHttp(inputObject)
     }
+
+    getUsers(){}
 
 }
 

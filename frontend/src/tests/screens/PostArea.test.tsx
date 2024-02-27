@@ -54,7 +54,6 @@ describe("PostArea.tsxのテスト",() =>{
         expect(inputRemark.value).toEqual("nezumi")
     })
 
-    // ↓絶対消さないで！！上のテスト終わったら復活して良いやつ。テストとしては完成してます！！！！
     test("投稿ボタンを押したらsubmitメソッドに各inputに入力された値を引数として渡す", async () => {
         const dummyInputData: InputObject = {
             name: "tanaka",
