@@ -1,30 +1,30 @@
-// // import {render} from "@testing-library/react"
-// // import App from "../App.tsx";
-// // import {describe, expect, test, vi} from "vitest";
-// // import {PostArea} from "../screens/PostArea.tsx"
-// // import {InfoArea} from "../screens/InfoArea.tsx";
-// //
-// //
-// // vi.mock("../components/PostArea.tsx")
-// // vi.mock("../components/InfoArea.tsx")
-// // describe("App.tsxのテスト",()=> {
-// //     test("App.tsxをレンダリングするとPostAreaコンポーネントをレンダリングする",()=>{
-// //         //given
-// //
-// //         //when
-// //         render(<App />)
-// //
-// //         //then
-// //         expect(PostArea).toHaveBeenCalled()
-// //     })
-// //
-// //     test('App.tsxをレンダリングするとInfoAreaコンポーネントをレンダリングする', () => {
-// //         render(<App />)
-// //
-// //
-// //         expect(InfoArea).toHaveBeenCalled()
-// //     })
-// // })
+// import {render} from "@testing-library/react"
+// import App from "../App.tsx";
+import {describe, test, vi} from "vitest";
+// import {PostArea} from "../screens/PostArea.tsx"
+// import {InfoArea} from "../screens/InfoArea.tsx";
+
+
+vi.mock("../components/PostArea.tsx")
+vi.mock("../components/InfoArea.tsx")
+describe("App.tsxのテスト",()=> {
+    test("App.tsxをレンダリングするとPostAreaコンポーネントをレンダリングする",()=>{
+        //given
+
+        //when
+        // render(<App />)
+
+        //then
+        // expect(PostArea).toHaveBeenCalled()
+    })
+
+    test('App.tsxをレンダリングするとInfoAreaコンポーネントをレンダリングする', () => {
+        // render(<App />)
+
+
+        // expect(InfoArea).toHaveBeenCalled()
+    })
+})
 // import { vi } from 'vitest';
 // import { render, screen } from '@testing-library/react';
 // import '@testing-library/jest-dom';

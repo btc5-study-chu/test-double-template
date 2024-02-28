@@ -12,7 +12,9 @@ export const InfoArea = (
     const [users, setUsers] = useState<GetUser[]>([])
     useEffect(() => {
         const getAllUser = async() => {
-           setUsers(await userRepository?.getUsers())
+            const usersData = await userRepository?.getUsers()
+            console.log(usersData)
+           setUsers(usersData)
         }
         getAllUser()
     }, []);
@@ -30,19 +32,20 @@ export const InfoArea = (
                         <th>一言</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {users.map(user =>{
-                        return (
-                            <tr key={user.id}>
-                                <td>{user.id}</td>
-                                <td>{user.name}</td>
-                                <td>{user.nickName}</td>
-                                <td>{user.term}</td>
-                                <td>{user.remark}</td>
-                            </tr>
-                        )
-                    })}
-                </tbody>
+                    <tbody>
+                        {
+                            users.map(user => {
+                            return (
+                                <tr key={user.id}>
+                                    <td>{user.id}</td>
+                                    <td>{user.name}</td>
+                                    <td>{user.nickName}</td>
+                                    <td>{user.term}</td>
+                                    <td>{user.remark}</td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
             </table>
         </>
 

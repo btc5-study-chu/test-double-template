@@ -15,7 +15,7 @@ export class DefaultUserRepository implements UserRepository {
     }
 
     async getUsers():Promise<GetUser[]>{
-        return await []
+        return Promise.resolve(this.http.getUsersHttp())
     }
 
 }

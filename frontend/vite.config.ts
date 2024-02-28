@@ -14,6 +14,7 @@ export default defineConfig({
   test: testConfig,
   plugins: [react()],
   server: {
+    port:9898,
     proxy: {
       '/api': 'http://localhost:8080',
     },

@@ -8,12 +8,12 @@ describe('InfoArea.tsxのテスト',()=>{
 
 
     test('InfoAreaがレンダリングされた時、データ数というテキストがあること',()=>{
-        render(<InfoArea />)
+        render(<InfoArea userRepository = {new SpyUserRepository}/>)
 
         expect(screen.getByText('データ数 :')).toBeInTheDocument()
     })
     test('InfoAreaがレンダリングされた時、テーブルヘッダーがいること',() => {
-        render(<InfoArea />)
+        render(<InfoArea userRepository = {new SpyUserRepository}/>)
 
         expect(screen.getByRole('table')).toBeInTheDocument()
         expect(screen.getByRole('columnheader',{name:"ID"})).toBeInTheDocument()
