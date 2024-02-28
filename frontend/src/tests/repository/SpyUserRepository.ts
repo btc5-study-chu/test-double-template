@@ -1,4 +1,4 @@
-import {InputObject} from "../../type/TypeUserRepository.ts";
+import {GetUser, InputObject} from "../../type/TypeUserRepository.ts";
 import {UserRepository} from "../../repository/UserRepository.ts";
 
 export class SpyUserRepository implements UserRepository {
@@ -9,7 +9,8 @@ export class SpyUserRepository implements UserRepository {
         this.submit_argumetValue = inputsObject
     }
 
-    getUsers() {
+    async getUsers():Promise<GetUser[]> {
         this.getUsers_wasCalled = true
+        return await []
     }
 }

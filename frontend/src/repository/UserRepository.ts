@@ -1,9 +1,9 @@
-import {InputObject} from "../type/TypeUserRepository.ts";
+import {GetUser, InputObject} from "../type/TypeUserRepository.ts";
 import {DefaultHttp, Http} from "../http/Http.ts";
 
 export  interface UserRepository {
     submit(inputObject: InputObject): void
-    getUsers():void
+    getUsers(): Promise<GetUser[]>
 }
 export class DefaultUserRepository implements UserRepository {
     http: Http
@@ -14,7 +14,9 @@ export class DefaultUserRepository implements UserRepository {
         this.http.submitHttp(inputObject)
     }
 
-    getUsers(){}
+    async getUsers():Promise<GetUser[]>{
+        return await []
+    }
 
 }
 

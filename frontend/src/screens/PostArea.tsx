@@ -47,6 +47,7 @@ export const PostArea = (
 }
 
 
+
 // 名前        input: string
 // ニックネーム input: string
 // FND        input: string …かな?
