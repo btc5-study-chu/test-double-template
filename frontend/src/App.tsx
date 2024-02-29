@@ -6,6 +6,7 @@ import {InfoArea} from "./screens/InfoArea.tsx";
 
 function App() {
 
+
   return (
     <>
       <PostArea />
