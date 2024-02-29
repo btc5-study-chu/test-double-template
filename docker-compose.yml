@@ -1,0 +1,16 @@
+services:
+  test-double-template_postgres:
+    image: postgres:15.3
+    container_name: test-double-template_postgres
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=testdb
+    volumes:
+      - test-double-template_postgres:/var/lib/postgresql
+
+volumes:
+  test-double-template_postgres:
