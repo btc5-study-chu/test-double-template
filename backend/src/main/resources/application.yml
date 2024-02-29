@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/testdb
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    generate-ddl: true
+    properties:
+      javax:
+        persistence:
+          validation:
+            mode: none
