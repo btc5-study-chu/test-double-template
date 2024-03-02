@@ -25,3 +25,4 @@ describe("App.tsxのテスト",()=> {
         expect(InfoArea).toHaveBeenCalled()
     })
 })
+
